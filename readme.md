@@ -99,7 +99,11 @@ Installation über `pip`:
 
 ```bash
 pip install -r requirements.txt
-
+```
 ## 📜 Lizenz
 
 MIT License – freie Nutzung, Modifikation und Weitergabe erlaubt.
+
+## 🖼️ Screenshot
+
+![FibonacciPoetry ](screenshots/main_window.png)
