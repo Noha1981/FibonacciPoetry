@@ -91,6 +91,12 @@ https://www.python.org/downloads/
 
 ---
 
+## Dependencies
+
+- dearpygui
+- pytest (used for CI testing)
+
+
 ### Abhängigkeiten installieren
 
 Dieses Projekt nutzt externe Python-Bibliotheken.
@@ -103,6 +109,8 @@ pip install -r requirements.txt
 ## 📜 Lizenz
 
 MIT License – freie Nutzung, Modifikation und Weitergabe erlaubt.
+
+
 
 ## 🖼️ Screenshot
 
