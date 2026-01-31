@@ -11,5 +11,5 @@ def test_four_words():
 
 def test_eleven_words():
     input_text = "Dies ist ein weiterer Test mit ganz genau elf Wörtern im Satz."
-    expected_output = "Dies\nit\nein weiterer\nTest mit ganz\ngenau elf Wörtern im Satz."
+    expected_output = "Dies\nist\nein weiterer\nTest mit ganz\ngenau elf Wörtern im Satz."
     assert fib.fibo_poem(input_text) == expected_output
