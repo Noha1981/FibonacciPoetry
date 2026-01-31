@@ -1,3 +1,6 @@
+from idlelib.multicall import MC_ENTER
+from tkinter.constants import CENTER
+
 import dearpygui.dearpygui as dpg
 import sys
 import pathlib
@@ -28,7 +31,7 @@ def build_ui():
 
         # Eingabebereich
         dpg.add_text("Eingabetext", tag="lbl_Eingabe")
-        dpg.add_input_text(tag="fib_input", width=-1,height = 10, hint="Gib hier den Eingabetext ein")
+        dpg.add_input_text(tag="fib_input", width=-1, hint="Gib hier den Eingabetext ein")
 
         dpg.add_separator()
 
@@ -40,7 +43,7 @@ def build_ui():
         dpg.add_spacing(count=1)
 
         # Button
-        dpg.add_button(label="Poetry Text", callback=on_poetry_click)
+        dpg.add_button(label="Poetry Text", height=20,callback=on_poetry_click)
 
     dpg.create_viewport(title="Fibonacci Poetry", width=width, height=height)
     dpg.setup_dearpygui()
