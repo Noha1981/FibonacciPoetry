@@ -53,8 +53,9 @@ Dies
 ist
 ein kurzes
 Beispiel um zu
-zeigen wie die
-Fibonacci Poesie funktioniert
+zeigen wie die Fibonacci Poesie 
+funktioniert . . . . . . .
+
 ```
 
 ---
