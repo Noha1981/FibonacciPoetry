@@ -86,7 +86,7 @@ git clone https://github.com/Noha1981/FibonacciPoetry.git
 
 ### Voraussetzungen
 
-- Python **3.10 oder neuer**
+- Python **3.9 oder neuer**
 
 Python kann von der offiziellen Website heruntergeladen werden:  
 https://www.python.org/downloads/
