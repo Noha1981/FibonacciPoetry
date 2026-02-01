@@ -8,7 +8,6 @@ aufteilt, wobei die Anzahl der Wörter in jeder Zeile den Fibonacci-Zahlen folgt
 Falls am Ende nicht genügend Wörter übrig sind, werden die Zeilen mit '.' aufgefüllt
 """
 
-from typing import List
 
 # Hauptfunktion, welche den Text in Fibonacci-Poesie umwandelt
 # Basierend auf der Liste der Fibonacci-Zahlen wird der Text in Zeilen aufgeteilt
@@ -32,17 +31,15 @@ def fibo_poem(text: str) -> str:
     return "\n".join(lines)
 
 # Hilfsfunktion zur Generierung der Fibonacci-Zahlen
-def fib_it(n: int) -> List[int]:
+def fib_it(n: int) -> list[int]:
     """Gibt eine Liste von Fibonacci-Größen zurück, so dass ihre kumulierte Summe >= n."""
     if n <= 0:
         return []
     if n == 1:
         return [1]
+
     seq = [1, 1]
-    cum = 2
-    while cum < n:
-        nxt = seq[-1] + seq[-2]
-        seq.append(nxt)
-        cum += nxt
+    while len(seq) < n:
+        seq.append(seq[-1] + seq[-2])
     return seq
 

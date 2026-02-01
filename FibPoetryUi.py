@@ -17,11 +17,16 @@ except Exception:
 
 def on_poetry_click(sender, app_data, user_data):
     text = dpg.get_value("fib_input")
+    fib_seq =""
     try:
-        result = FibPoetry.fibo_poem(text)
+        result = FibPoetry.fibo_poem(text) # Fibonacci-Poesie erzeugen
+        result = result.replace("\r", "")
+        line_count = len(result.splitlines()) if result else 0
+        fib_seq = "\n".join(map(str, FibPoetry.fib_it(line_count))) # String Fibonacci-Zahlen
     except Exception as e:
         result = f"Fehler beim Erzeugen des Gedichts: {e}"
     dpg.set_value("fib_output", result)
+    dpg.set_value("fib_zahlen", fib_seq)
 
 def add_data_menu_with_impressum(window_tag: str = "main_window"):
     url = "https://www.facebook.com/BrianBilston/posts/pfbid0PnieZPXmdzgNy6vWzRjFkDsKch4YvTCEJv65LS5sGa4daYoygbHJcG1TVK5Nw9SGl"
@@ -63,10 +68,13 @@ def build_ui():
         dpg.add_input_text(tag="fib_input", width=-1, hint="Gib hier den Eingabetext ein")
 
         dpg.add_separator()
-
         # Ausgabebereich
-        dpg.add_text("Fibonacci Poetry Output")
-        # Mehrzeilig und readonly, damit Zeilenumbrüche akzeptiert werden und Ausgabe nicht editierbar ist
+        dpg.add_text("Felder")
+        dpg.add_text("Fib")
+        dpg.add_same_line()
+        dpg.add_text("  Fibonacci Poetry Output")
+        dpg.add_input_text(tag="fib_zahlen", multiline=True, height=200, width=30, readonly=True)
+        dpg.add_same_line()
         dpg.add_input_text(tag="fib_output", multiline=True, height=200, width=-1, readonly=True)
 
         dpg.add_spacing(count=1)
