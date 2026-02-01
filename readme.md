@@ -30,12 +30,13 @@ Das Ergebnis ist ein kleines, mathematisch inspiriertes Gedicht – ein spieleri
 
 ## 🗂️ Projektdateien
 
-| Datei | Beschreibung |
-|------|--------------|
-| `Program.cs` | Einstiegspunkt des Programms. Verantwortlich für Benutzereingabe und Ausgabe. |
-| `FibonacciPoetry.cs` | Enthält die Kernlogik zur Erzeugung der Fibonacci-Poesie (Wortverteilung und Folgenberechnung). |
-| `README.md` | Projektdokumentation. |
-
+| Datei               | Beschreibung                                                                                    |
+|---------------------|-------------------------------------------------------------------------------------------------|
+| `FibPoetryUi.py`    | Einstiegspunkt des Programms. Verantwortlich für Benutzereingabe und Ausgabe.                   |
+| `FibPoetry.py`      | Enthält die Kernlogik zur Erzeugung der Fibonacci-Poesie (Wortverteilung und Folgenberechnung). |
+| `README.md`         | Projektdokumentation.                                                                           |
+| `requirements.txt`  | Benötigte Installationen                                                                        |                                                                       |
+| `test_FibPoetry.py` | Testcases für die Kernlofik und CI |                                                             |
 ---
 
 ## 📦 Beispiel
@@ -68,6 +69,8 @@ Es verfolgt keinen produktiven Zweck, sondern zeigt auf spielerische Weise:
 - algorithmisches Denken
 - Textverarbeitung
 - kreative Programmierung
+- CI Integration
+- Git Versionierung
 
 Inspiriert durch eine Idee aus sozialen Medien verbindet es Mathematik und Sprache zu einem kleinen Code-Experiment.
 
